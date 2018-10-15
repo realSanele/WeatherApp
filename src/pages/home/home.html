@@ -1,14 +1,52 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header  >
+
+  <ion-navbar color="secondary">
+    <ion-title>Weather </ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content>
+  <div class="title_h">
+    <h2>Know Your Current Weather</h2>
+  </div>
+
+  <div class="input" *ngIf = "show == 0">
+    <ion-item>
+      <ion-label>Select City</ion-label>
+      <ion-select [(ngModel)]="city" >
+        <ion-option value="Pretoria" >Pretoria</ion-option>
+        <ion-option value="Johannesburg">Johannesburg</ion-option>
+      </ion-select>
+    </ion-item>
+    <button ion-button full (click) = "viewWeather()">View Weather</button>
+  </div>
+  <!--*ngIf = "infoList != 0"-->
+  <div class="output" *ngIf = "show == 1">
+    <h2>Currently At {{city}}</h2>
+      <img src="http://openweathermap.org/img/w/{{info?.weather[0].icon}}.png">
+    <ion-grid>
+      <ion-row >
+        <ion-col><b>Description</b></ion-col>
+        <ion-col>{{info?.weather[0].description}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><b>Humidity</b></ion-col>
+        <ion-col>{{info?.main.humidity}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><b>Pressure</b></ion-col>
+        <ion-col>{{info?.main.pressure}}</ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <button ion-button full (click) = "refresh()">ReFresh</button>
+  </div>
 </ion-content>

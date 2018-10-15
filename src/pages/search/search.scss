@@ -1,0 +1,84 @@
+page-search {
+    ion-navbar{
+        height: 5%;
+        ion-grid{
+            background-color: rgba(56, 73, 92, 0.863);
+            ion-searchbar{
+                background-color: white;
+            }
+        }
+        
+        ion-icon{
+            background-color: #488aff;
+            color: white;
+            //border: 1px solid;
+            //padding-right: 40px;
+            //padding-top: 12px;
+            margin: 50% 0% 0% 0%;
+            font-size: 35px;
+        }
+
+    }
+    
+    ion-content{
+        background-image: url('../../assets/imgs/BAckground.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        //background-color: rgba(204, 229, 249, 0.84);
+    }
+
+    //.welcom .mySlides {display:none;}
+    
+    .m_content{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+
+        background-image: url('../../assets/imgs/download.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        //background-color: rgba(204, 229, 249, 0.84);
+        .welcom{
+            h2{
+                color: white;
+                text-align: center;
+            }
+
+            img{
+                margin: 11% 5% 0 0;
+                width: 100%
+            }
+
+            h3{
+                text-align: center;
+                color: white;
+            }
+        }
+        
+
+        .output{
+            margin-top: 0%;
+    
+            h2{
+                text-align: center;
+                color: white;
+            }
+
+            h3{
+                text-align: center;
+                color: white;
+            }
+
+            img{
+                height: 45%;
+                width: 45%;
+                margin-left: 25%; 
+            }
+
+            ion-grid{
+                background-color: rgba(56, 73, 92, 0.863);
+                color: white;
+            }
+        }
+    }
+}
